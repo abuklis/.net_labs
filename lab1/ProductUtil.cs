@@ -18,7 +18,7 @@ namespace lab1
             var productsList = new List<Product>();
             if (IsProductArrayValid(products) && !string.IsNullOrEmpty(name)) {
                 foreach (var product in products) {
-                    if (AreStringsEqualIgnoreCase(product.GetName(), name)) {
+                    if (AreStringsEqualIgnoreCase(product.Name, name)) {
                         productsList.Add(product);
                     }
                 }
@@ -34,7 +34,7 @@ namespace lab1
             
             if (IsProductArrayValid(products) && !string.IsNullOrEmpty(name)) {
                 foreach (var product in products) {
-                    if (AreStringsEqualIgnoreCase(product.GetName(), name) && product.GetPrice() < price) {
+                    if (AreStringsEqualIgnoreCase(product.Name, name) && product.Price < price) {
                         productsList.Add(product);
                     }
                 }
@@ -48,7 +48,7 @@ namespace lab1
             var productsList = new List<Product>();
             if (IsProductArrayValid(products)) {
                 foreach (var product in products) {
-                    if (product.GetShelfLifeMonth() > shelfLifeMonth) {
+                    if (product.ShelfLifeMonth > shelfLifeMonth) {
                         productsList.Add(product);
                     }
                 }
